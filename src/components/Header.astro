@@ -18,7 +18,7 @@ interface Props {
 }
 
 const BASE = import.meta.env.BASE_URL;
-const BLOG_REPO_URL = 'https://github.com/Dancncn/DansBlog';
+const BLOG_REPO_URL = 'https://github.com/smathsp/DBlog';
 const NAV_LINKS = getNavLinks(BASE);
 const { showTocButton = false } = Astro.props as Props;
 ---
@@ -125,9 +125,9 @@ const { showTocButton = false } = Astro.props as Props;
 				</div>
 			</div>
 
-			<a href={BLOG_REPO_URL} target="_blank" rel="noreferrer" aria-label="DanArnoux Blog Repository">
+			<a href={BLOG_REPO_URL} target="_blank" rel="noreferrer" aria-label="Source Code">
 				<img
-					src="https://img.smathsp.com/misc/DanArnoux.webp"
+					src="/image/avatar-placeholder.svg"
 					alt="Dan Arnoux avatar"
 					class="h-9 w-9 rounded-full border border-zinc-200/80 object-cover shadow-[0_6px_18px_rgba(15,23,42,0.08)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.03] hover:border-zinc-300 hover:shadow-[0_10px_22px_rgba(15,23,42,0.12)] active:scale-95 dark:border-zinc-700/80 dark:shadow-[0_8px_18px_rgba(0,0,0,0.18)] dark:hover:border-zinc-500"
 				/>
@@ -200,7 +200,7 @@ const { showTocButton = false } = Astro.props as Props;
 				>
 					<img
 						id="user-avatar"
-						src="https://img.smathsp.com/misc/DanArnoux.webp"
+						src="/image/avatar-placeholder.svg"
 						alt="User avatar"
 						class="h-8 w-8 rounded-full object-cover"
 					/>
@@ -215,7 +215,7 @@ const { showTocButton = false } = Astro.props as Props;
 						<div class="flex items-center gap-3">
 							<img
 								id="dropdown-user-avatar"
-								src="https://img.smathsp.com/misc/DanArnoux.webp"
+								src="/image/avatar-placeholder.svg"
 								alt="User avatar"
 								class="h-10 w-10 rounded-full object-cover"
 							/>
@@ -353,7 +353,7 @@ const { showTocButton = false } = Astro.props as Props;
 		const modalClose = document.getElementById('login-modal-close');
 		const dropdownAvatar = document.getElementById('dropdown-user-avatar');
 		const settingsButton = document.getElementById('settings-button');
-		const fallbackAvatar = 'https://img.smathsp.com/misc/DanArnoux.webp';
+		const fallbackAvatar = '/image/avatar-placeholder.svg';
 
 		if (!loginButton || !userDropdown || !userDropdownButton || !userDropdownMenu || !logoutButton || !settingsButton) {
 			return;

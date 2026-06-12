@@ -1,20 +1,17 @@
-﻿---
+---
 import Layout from '../layouts/BlogPost.astro';
 import GoldenSpiral from '../components/GoldenSpiral.astro';
 import MeteorShower from '../components/MeteorShower.astro';
 import TerminalQuote from '../components/TerminalQuote.astro';
 
-const nowText =
-	'Now: Preparing for an internship at a research institute, while building an intelligent hotel management system on the side.';
+const nowText = 'Now: Building things.';
 ---
 
 <Layout
-	title="About Me - Dan Arnoux (符笙)"
-	description="Learn more about DanArnoux (符笙), an energy engineering student from China passionate about practical engineering, clear reasoning, and building reproducible systems."
-	pubDate={new Date('Feb 10 2026')}
+	title="About"
+	description="About this blog."
+	pubDate={new Date('2026-06-12')}
 	metaMode="page"
-	heroImage="https://img.smathsp.com/misc/about-image.webp"
-	profileImage="https://img.smathsp.com/misc/DanArnoux.webp"
 >
 	<Fragment slot="background">
 		<GoldenSpiral />
@@ -22,31 +19,14 @@ const nowText =
 	</Fragment>
 	<div class="mx-auto max-w-3xl">
 		<p>
-			I am DanArnoux (符笙), an energy engineering student from China. I care about practical
-			engineering, clear reasoning, and building systems that can be explained and reproduced.
-			This blog is my long-term notebook for experiments, tools, and technical decisions.
+			Edit this page in <code>src/pages/about.astro</code>.
 		</p>
-
-		<h2>Focus</h2>
-		<ul>
-			<li>Electrochemistry and materials aging: CV / EIS / ECSA analysis, battery degradation, and characterization</li>
-			<li>Simulation and modeling: battery-oriented FEM studies, Simulink models, and reproducible workflows</li>
-			<li>
-				AI and applied systems: Stable Diffusion, LLM-assisted tooling, and
-				<a href="https://creatinf.com/" target="_blank" rel="noreferrer">CreatInf</a>
-			</li>
-		</ul>
-
-		<h2>Now</h2>
-		<div class="mx-auto max-w-2xl text-left">
-			<TerminalQuote text={nowText} once={true} fixedHeight={false} />
-		</div>
 
 		<h2>Contact</h2>
 		<p>
-			The best way to reach me is via the
+			Use the
 			<button type="button" class="contact-link" data-modal-toggle="contact">contact form</button>
-			on this site. You can also find me via GitHub and Bilibili from the site navigation.
+			or find me on GitHub.
 		</p>
 	</div>
 </Layout>
