@@ -74,7 +74,7 @@ const cfWebAnalyticsToken = import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN;
 	rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap"
 />
-<!-- Brand wordmark face, subset to the exact glyphs of "Dan's Blog" (~few KB). -->
+<!-- Brand wordmark font, subset to the exact glyphs of "Blog" (~few KB). -->
 <link
 	rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&text=Blog%E2%80%99&display=swap"
@@ -566,7 +566,7 @@ const cfWebAnalyticsToken = import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN;
 		{
 			const NAV_ORDER = { '': 0, blog: 1, tags: 2, links: 3, about: 4 };
 			const segmentFor = (url) => {
-				const parts = url.pathname.split('/').filter(Boolean).filter((p) => p !== 'DansBlog');
+				const parts = url.pathname.split('/').filter(Boolean).filter((p) => p !== 'DBlog');
 				return parts[0] || '';
 			};
 
