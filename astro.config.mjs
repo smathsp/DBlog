@@ -82,7 +82,7 @@ const isGitHubPages = Boolean(process.env.GITHUB_ACTIONS) || process.env.DEPLOY_
 const isProduction = process.env.NODE_ENV === 'production';
 // Cloudflare serves from "/", while GitHub Pages needs the repository subpath.
 const runtimeBase = isCloudflarePages ? '/' : isGitHubPages && isProduction ? REPO_BASE : '/';
-const runtimeSite = 'https://smathsp.com';
+const runtimeSite = 'https://blog.smathsp.com';
 
 /*
  * Rewrites markdown `<img src="/image/...">` to include the active base path.
@@ -126,10 +126,10 @@ export default defineConfig({
 		mdx(),
 		sitemap({
 			filter: (page) => {
-				if (page === 'https://smathsp.com/admin/' || page === 'https://smathsp.com/important/') {
+				if (page === 'https://blog.smathsp.com/admin/' || page === 'https://blog.smathsp.com/important/') {
 					return false;
 				}
-				return !/^https:\/\/smathsp\.com\/blog\/page\/\d+\/$/.test(page);
+				return !/^https:\/\/blog\.smathsp\.com\/blog\/page\/\d+\/$/.test(page);
 			},
 		}),
 	],
