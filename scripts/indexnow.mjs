@@ -16,7 +16,7 @@
 
 // IndexNow config from environment variables
 const KEY = process.env.INDEXNOW_KEY;
-const HOST = process.env.INDEXNOW_HOST || 'danarnoux.com';
+const HOST = process.env.INDEXNOW_HOST || 'smathsp.com';
 
 // Bing IndexNow endpoint
 const BING_URL = 'https://www.bing.com/indexnow';
@@ -141,13 +141,13 @@ async function main() {
 	if (args[0] === 'sitemap') {
 		// Fetch from sitemap
 		console.log('📥 Fetching URLs from sitemap...');
-		urls = await fetchUrlsFromSitemap(`https://danarnoux.com/sitemap.xml`);
+		urls = await fetchUrlsFromSitemap(`https://smathsp.com/sitemap.xml`);
 		console.log(`   Found ${urls.length} URLs`);
 	} else {
 		// Use provided URLs
 		urls = args.map((url) => {
 			// Ensure URL has protocol
-			return url.startsWith('http') ? url : `https://danarnoux.com${url.startsWith('/') ? '' : '/'}${url}`;
+			return url.startsWith('http') ? url : `https://smathsp.com${url.startsWith('/') ? '' : '/'}${url}`;
 		});
 	}
 

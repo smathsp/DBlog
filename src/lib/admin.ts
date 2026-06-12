@@ -1,6 +1,6 @@
 const API_BASE = import.meta.env.DEV
 	? 'http://localhost:8787'
-	: 'https://api.danarnoux.com';
+	: 'https://api.smathsp.com';
 
 export interface AdminStats {
 	total: number;
@@ -77,7 +77,7 @@ export async function deleteComment(id: string): Promise<{ success: boolean }> {
 }
 
 export async function checkAdmin(): Promise<{ isAdmin: boolean; email: string | null }> {
-	// Note: This requires Cloudflare Access policy on api.danarnoux.com
+	// Note: This requires Cloudflare Access policy on api.smathsp.com
 	// Cloudflare Access injects CF-Access-Authenticated-User-Email header
 	// when the user has an active Access session.
 	// Do NOT override this header - let Cloudflare inject the real value.

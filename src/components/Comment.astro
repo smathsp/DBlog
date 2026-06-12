@@ -54,7 +54,7 @@ const { postSlug } = Astro.props;
 </section>
 
 <script>
-	const API_BASE = (window as any).__API_BASE || 'https://api.danarnoux.com';
+	const API_BASE = (window as any).__API_BASE || 'https://api.smathsp.com';
 
 	const { storeTokenFromHash, getAuthToken, getCurrentUser } = (window as any).__auth || {};
 
@@ -115,7 +115,7 @@ const { postSlug } = Astro.props;
 
 	const renderComment = (comment: CommentData, isReply = false): string => {
 		const userName = escapeHtml(comment.user?.name || comment.user?.login || 'Anonymous');
-		const avatarUrl = escapeHtml(comment.user?.avatarUrl || 'https://img.danarnoux.com/misc/DanArnoux.webp');
+		const avatarUrl = escapeHtml(comment.user?.avatarUrl || 'https://img.smathsp.com/misc/DanArnoux.webp');
 		const commentId = escapeHtml(comment.id);
 		const commentBody = escapeHtml(comment.content || comment.body || '');
 		const replyCount = comment.replies?.length || 0;
